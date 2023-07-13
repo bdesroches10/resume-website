@@ -1,0 +1,32 @@
+/* font-family: 'Lato', sans-serif; */
+
+* {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    width: 100vw;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.introduction {
+    width: 100%;
+    display: flex;
+}
+
+.introduction > img {
+    width: 35%;
+}
+
+.description {
+    width: 65%;
+}
