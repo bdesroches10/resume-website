@@ -5,7 +5,7 @@
 
     Seasalt: hsl(270, 14%, 97%);
     Nyanza: hsl(120, 100%, 95%);
-    Celadon: hsl(133, 41%, 67%);
+    Celadon: hsl(133, 41%, 76%);
     Dark spring green: hsl(152, 72%, 27%);
     Eerie black: hsl(199, 17%, 12%);
 */
@@ -16,14 +16,9 @@
 }
 
 :root {
-    width: 100vw;
+    width: 99vw;
     background-color: hsl(120, 100%, 95%);
     color: hsl(199, 17%, 12%);
-}
-
-body {
-    width: 70%;
-    margin: auto;
 }
 
 header {
@@ -52,45 +47,87 @@ h5 {
     font-weight: 300;
 }
 
-main {
-    background-color: hsl(133, 41%, 67%);
-    padding: 2em;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 3em;
-    border-radius: 0 0 0.833em 0.833em;
-}
-
-.introduction {
-    grid-area: 1/1/2/3; 
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.introduction > img {
-    width: 35%;
-}
-
-.description {
-    width: 60%;
-    margin-left: 2em;
-    font-size: 1.125rem;
-}
-
 hr {
     border: 2px solid hsl(152, 72%, 27%);
 }
 
-.work-history {
-    grid-area: 2/1/3/3;
+main {
+    background-color: hsl(133, 41%, 76%);
+    padding: 2em;
 }
 
-.education {
-    grid-area: 3/1/4/3;
+.introduction {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
 }
 
-.contact-links {
-    grid-area: 1/3/4/4;
+.headshot {
+    width: 30%;
+}
+
+.description {
+    width: 70%;
+    margin-left: 0.5em;
+}
+
+.contact-profiles {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.order-wrap {
+    width: 45%;
+    word-wrap: break-word;
+}
+
+.entry {
+    display: flex;
+    padding: 0.5em;
+}
+
+ul {
+    margin-top: 0.5em;
+}
+
+li {
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 930px) {
+    body {
+        max-width: 1200px;
+        min-width: 930px;
+        margin: auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 3em;
+    }
+
+    .introduction {
+        grid-area: 1/1/2/3; 
+    }
+
+    .contact-profiles {
+        grid-area: 1/3/4/4;
+        flex-direction: column;
+    }
+
+    .order-wrap {
+        width: 100%;
+    }
+
+    .work-history {
+        grid-area: 2/1/3/3;
+    }
+
+    .education {
+        grid-area: 3/1/4/3;
+    }
 }
